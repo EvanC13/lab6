@@ -116,7 +116,7 @@ do
     }
     if (choice == 3 || choice == 4)
     {
-        // Exercise 3
+        //Part 3
     }
 
     
