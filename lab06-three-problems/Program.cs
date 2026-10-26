@@ -15,7 +15,12 @@ int die2 = 0;
 char yn = 'y';
 int rolls = 1;
 int total = 0;
-
+int[] scores = new int [5];
+int scoreNum = 1;
+double divide = scores.Length;
+int scoreTotal = 0;
+int highest = 0;
+int passed = 0;
 
 // This loop allows the program to run indefinitely until a 5 is reached
 // where other loops would take much more code.
@@ -45,6 +50,7 @@ do
 
     if (choice == 1 || choice == 4)
     {
+        System.Console.WriteLine();
         System.Console.WriteLine("=== Exercise 1: The Grade Checker ===");
         System.Console.Write("Score: ");
         grade = Convert.ToInt32(Console.ReadLine());
@@ -74,13 +80,15 @@ do
         {
             System.Console.WriteLine(grade + " earns an F.");
         }
-        
+        System.Console.WriteLine();
     }
     if (choice == 2 || choice == 4)
     {
+        System.Console.WriteLine("=== Exercise 2: The Dice Table ===");
         //Do while allows the player to keep playing until 'N' is reached
         do
         {
+            
             die1 = rng.Next(1,7);
             die2 = rng.Next(1,7);
             total = die1 + die2;
@@ -92,7 +100,7 @@ do
             {
                 System.Console.Write("Doubles!");
             }
-            if (total == 7)
+            if (total == 7 || total == 11)
             {
                 System.Console.Write("A winner.");
             }
@@ -112,11 +120,41 @@ do
             }
             rolls++;
         }while (yn != 'n');
-        
+        System.Console.WriteLine();
     }
     if (choice == 3 || choice == 4)
     {
-        //Part 3
+        System.Console.WriteLine("=== Exercise 3: The Score Report ===");
+
+        //loops for an index value
+        for (int i = 0; i < scores.Length; i++)
+        {
+            System.Console.Write("Score " + scoreNum + ": ");
+            scores[i] = Convert.ToInt32(Console.ReadLine());
+            scoreNum++;
+            scoreTotal = scoreTotal + scores[i];
+
+            //Repeatedly checks for the highest entered value thus far, 
+            //other loops would not check each iteration
+            if (scores[i] > highest)
+            {
+                highest = scores[i];
+            }
+            //Repeatedly checks each [i] if they have passed, 
+            //other loops would not check it each iteration
+            if (scores[i] >= 60)
+            {
+                passed++;
+            }
+        }
+        System.Console.WriteLine();
+        System.Console.WriteLine("Scores entered: " + scores.Length);
+        double average = scoreTotal / scores.Length;
+        System.Console.WriteLine("Average: " + average);
+        System.Console.WriteLine("Highest: " + highest);
+        System.Console.WriteLine("Passing: " + passed + " out of " + scores.Length);
+        System.Console.WriteLine();
+
     }
 
     

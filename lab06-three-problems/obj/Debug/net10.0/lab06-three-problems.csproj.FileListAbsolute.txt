@@ -12,3 +12,4 @@ C:\Users\lizar\CSCI1250\lab6\lab06-three-problems\obj\Debug\net10.0\refint\lab06
 C:\Users\lizar\CSCI1250\lab6\lab06-three-problems\obj\Debug\net10.0\lab06-three-problems.pdb
 C:\Users\lizar\CSCI1250\lab6\lab06-three-problems\obj\Debug\net10.0\lab06-three-problems.genruntimeconfig.cache
 C:\Users\lizar\CSCI1250\lab6\lab06-three-problems\obj\Debug\net10.0\ref\lab06-three-problems.dll
+C:\Users\lizar\CSCI1250\lab6\lab06-three-problems\obj\Debug\net10.0\lab06-three-problems.sourcelink.json
