@@ -76,7 +76,7 @@ do
         } else if (grade >= 60)
         {
             System.Console.WriteLine(grade + " earns a D.");
-        } else if(grade < 60)
+        } else
         {
             System.Console.WriteLine(grade + " earns an F.");
         }
